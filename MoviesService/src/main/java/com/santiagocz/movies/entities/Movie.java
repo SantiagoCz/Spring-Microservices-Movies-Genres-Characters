@@ -22,8 +22,6 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Image URL is mandatory")
-    @Size(max = 255, message = "Image URL can't exceed 255 characters")
     private String image;
 
     @NotBlank(message = "Title is mandatory")
@@ -38,6 +36,6 @@ public class Movie {
     private Integer rating;
 
     @ElementCollection
-    private List<Long> characterIds;
+    private List<Long> charactersIds;
 }
 
