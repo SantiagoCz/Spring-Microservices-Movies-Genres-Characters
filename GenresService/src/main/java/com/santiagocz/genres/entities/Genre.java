@@ -23,6 +23,7 @@ public class Genre {
     private Long id;
 
     @NotBlank(message = "Name is mandatory")
+    @Column(unique = true)
     private String name;
 
     private String image;
