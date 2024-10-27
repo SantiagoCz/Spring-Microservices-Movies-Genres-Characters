@@ -26,6 +26,7 @@ public class Movie {
 
     @NotBlank(message = "Title is mandatory")
     @Size(max = 255, message = "Title can't exceed 255 characters")
+    @Column(unique = true)
     private String title;
 
     @NotNull(message = "Creation date is mandatory")
@@ -37,5 +38,8 @@ public class Movie {
 
     @ElementCollection
     private List<Long> charactersIds;
+
+    @ElementCollection
+    private List<Long> genresIds;
 }
 
