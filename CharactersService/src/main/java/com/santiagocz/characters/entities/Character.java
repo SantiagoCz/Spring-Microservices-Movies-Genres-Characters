@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "character")
+@Table(name = "character_entity")
 public class Character {
 
     @Id
@@ -25,6 +25,7 @@ public class Character {
     private Long id;
 
     @NotBlank(message = "Name is mandatory")
+    @Column(unique = true)
     private String name;
 
     @NotNull(message = "Age is mandatory")
